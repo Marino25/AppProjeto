@@ -24,12 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.login.Cadastro;
-import com.example.login.Cadastro;
 
 import com.example.login.R;
-
-import com.example.login.ui.login.LoginViewModel;
-import com.example.login.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
-        final Button registerButton = findViewById(R.id.registrar);
+        final Button registerButton = findViewById(R.id.btn_registrar);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
@@ -128,26 +124,24 @@ public class LoginActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent it = new Intent(LoginActivity.this, Cadastro.class);
+                startActivity(it);
 
-
-                Intent intent = new Intent(LoginActivity.this, Cadastro.class);
-
-                startActivity(intent);
             }
         });
-    }
-
-
-
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
-
 
     }
 
-    private void showLoginFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+
+        private void updateUiWithUser (LoggedInUserView model){
+            String welcome = getString(R.string.welcome) + model.getDisplayName();
+            // TODO : initiate successful logged in experience
+            Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+
+
+        }
+
+        private void showLoginFailed (@StringRes Integer errorString){
+            Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+        }
     }
-}
