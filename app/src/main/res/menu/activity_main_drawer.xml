@@ -19,8 +19,13 @@
             android:title="Abastecimento" />
         <item
             android:id="@+id/nav_manu"
-            android:icon="@drawable/comb"
-            android:title="Abastecimento" />
+            android:icon="@drawable/manutencao"
+            android:title="Manutenção" />
+        <item
+            android:id="@+id/nav_pedagio"
+            android:icon="@drawable/pedagio"
+            android:title="Pedagio" />
+
 
 
     </group>
@@ -32,26 +37,54 @@
             android:title="Relatórios">
             <menu>
                 <item
-                    android:id="@+id/nav_slideshow"
-                    android:icon="@drawable/analytics"
-                    android:title="Histórico" />
+                    android:id="@+id/nav_histUso"
+                    android:icon="@drawable/estatisticas"
+                    android:title="Histórico Uso" />
 
                 <item
-                    android:id="@+id/nav_"
-                    android:icon="@drawable/analytics"
-                    android:title="Posto" />
+                    android:id="@+id/nav_histAbast"
+                    android:icon="@drawable/uti"
+                    android:title="Histórico Abastecimento" />
 
                 <item
-                    android:id="@+id/nav_rel_comb"
-                    android:icon="@drawable/analytics"
-                    android:title="Posto" />
+                    android:id="@+id/nav_histManu"
+                    android:icon="@drawable/search"
+                    android:title="Histórico Manutenção" />
+
+                <item
+                    android:id="@+id/nav_histPed"
+                    android:icon="@drawable/pedagio2"
+                    android:title="Histórico Pedagio" />
 
             </menu>
 
         </item>
 
 
+    </group>
+    <group>
 
+        <item
+
+            android:title="Ajuda">
+            <menu>
+                <item
+                    android:id="@+id/nav_conf"
+                    android:icon="@drawable/conf"
+                    android:title="Configuração" />
+
+                <item
+                    android:id="@+id/nav_Ajuda"
+                    android:icon="@drawable/information"
+                    android:title="Ajuda" />
+
+                <item
+                    android:id="@+id/nav_inf"
+                    android:icon="@drawable/info"
+                    android:title="Informação" />
+            </menu>
+
+        </item>
 
     </group>
 </menu>
