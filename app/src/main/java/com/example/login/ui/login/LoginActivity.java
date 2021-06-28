@@ -47,6 +47,9 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText.addTextChangedListener(afterTextChangedListener);
         passwordEditText.addTextChangedListener(afterTextChangedListener);
 
+
+
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,10 +89,10 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         private void receberDados () {
+
             u = new UserModel();
             u.setEmail(usernameEditText.getText().toString());
             u.setPassword(passwordEditText.getText().toString());
-
 
         }
 
